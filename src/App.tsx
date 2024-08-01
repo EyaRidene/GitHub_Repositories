@@ -22,14 +22,16 @@ interface Repository {
 const App: React.FC = () => {
   const [repositories, setRepositories] = useState<Repository[]>([]);
   const [profileData, setProfileData] = useState<any>(null);
+  const [totalStars, setTotalStars] = useState<number>(0);
   
   const handleSearch = async (userName: string) => {
   // fetch the repositories of the user
   try {
-    const response = await axios.get(`https://api.github.com/users/${userName}/repos`);
-    setRepositories(response.data);
-    const profileResponse = await axios.get(`https://api.github.com/users/${userName}`);
-    setProfileData(profileResponse.data);
+      const reposResponse = await axios.get(`https://api.github.com/users/${userName}/repos`);
+      setRepositories(reposResponse.data);
+      setTotalStars(reposResponse.data.reduce((sum: number, repo: any) => sum + repo.stargazers_count, 0));
+      const profileResponse = await axios.get(`https://api.github.com/users/${userName}`);
+      setProfileData(profileResponse.data);
   } catch (error) {
     console.error('Error fetching repositories', error);
   }
@@ -38,7 +40,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <SearchBar onSearch={handleSearch}/>
-      <Header/>
+      <Header repositoryCount={repositories.length} stars={totalStars}/>
       {profileData && (
         <div className="container">
           <div className="profile-section">
