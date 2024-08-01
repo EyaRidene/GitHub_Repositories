@@ -35,6 +35,7 @@ const App: React.FC = () => {
       <Header/>
       {profileData && (
         <div className="container">
+          <div className="profile-section">
           <Profile
             avatarUrl={profileData.avatar_url}
             name={profileData.name}
@@ -46,6 +47,8 @@ const App: React.FC = () => {
             email={profileData.email}
             linkedin={profileData.blog}
           />
+          </div>
+          <div className="repository-list-section">
           <RepositoryList
             repositories={repositories.map((repo: any) => ({
               id: repo.id,
@@ -53,6 +56,7 @@ const App: React.FC = () => {
               language: repo.language,
             }))}
           />
+          </div>
         </div>
       )}
     </div>
