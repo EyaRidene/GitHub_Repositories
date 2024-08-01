@@ -1,0 +1,40 @@
+.repository-item {
+    padding: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    border-top: 1px solid #d8dbdb;
+    text-align: center;
+    text-align: left;
+    position: relative;
+  
+}
+
+.repository-item a {
+    text-decoration: none;
+    color: #0366d6;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.repository-item a:hover {
+    text-decoration: underline;
+}
+
+.repository-item p {
+    margin: 10px 0;
+    color: #586069;
+}
+
+.repository-item h3 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.repository-item .info {
+    display: flex;
+    gap: 25px;
+    font-size: 10px;
+}
