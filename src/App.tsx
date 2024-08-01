@@ -11,6 +11,12 @@ interface Repository {
   id: number;
   name: string;
   language: string | null;
+  html_url: string;
+  description: string | null;
+  stars: number;
+  license: string | null;
+  visibility: string;
+  updated_at: string;
 }
 
 const App: React.FC = () => {
@@ -52,8 +58,14 @@ const App: React.FC = () => {
           <RepositoryList
             repositories={repositories.map((repo: any) => ({
               id: repo.id,
-              name: repo.name,
-              language: repo.language,
+                name: repo.name,
+                language: repo.language,
+                html_url: repo.html_url,
+                description: repo.description,
+                stars: repo.stargazers_count,
+                license: repo.license ? repo.license.name : null,
+                visibility: repo.visibility,
+                updated_at: repo.updated_at
             }))}
           />
           </div>

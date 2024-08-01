@@ -38,3 +38,17 @@
     gap: 25px;
     font-size: 10px;
 }
+
+.repository-item .description {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.repository-item .visibility {
+    border-radius: 50px;
+    background-color: rgba(209, 213, 218, 0.5);;
+    padding: 2px 4px;
+    font-size: 8px;
+    color: rgb(96, 96, 96);
+    border: 1px solid gray;
+  }

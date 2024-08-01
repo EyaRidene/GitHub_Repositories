@@ -5,7 +5,13 @@ import '../styles/RepositoryList.css';
 interface Repository {
   id: number;
   name: string;
-  language:string;
+  language: string | null;
+  html_url: string;
+  description: string | null;
+  stars: number;
+  license: string | null;
+  visibility: string;
+  updated_at: string;
 }
 
 interface RepositoryListProps {
@@ -18,10 +24,16 @@ const RepositoryList: React.FC<RepositoryListProps> = ({ repositories }) => {
     <div className="repository-list">
         {repositories.map((repo) => (
           <RepositoryItem
-            key={repo.id}
-            name={repo.name}
-            language={repo.language || 'N/A'}
-          />
+          key={repo.id}
+          name={repo.name}
+          language={repo.language || 'N/A'}
+          html_url={repo.html_url}
+          description={repo.description}
+          stars={repo.stars}
+          license={repo.license}
+          visibility={repo.visibility}
+          updated_at={repo.updated_at}
+        />
         ))}
       </div>
   );
