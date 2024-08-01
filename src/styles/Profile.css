@@ -1,0 +1,58 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    flex: 1;
+}
+
+.profile-avatar {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.follow-button{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f3f6f9;
+    margin-bottom: 5px;
+    border: 1px solid #a9a9a9;
+    font-weight: 600;
+    color: #727272;
+    cursor: pointer;
+}
+
+.follow-button:hover{
+    background-color: #c9c9c9;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    align-self: start;
+    text-align: left;
+}
+
+.profile-name-second {
+    font-size: 15px;
+    margin: 0;
+    font-weight: normal;
+    align-self: start;
+    text-align: left;
+    color: #586069;
+    margin-bottom: 15px;
+}
+
+.profile-bio {
+    font-size: 13px;
+    align-self: start;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: none;
+}
