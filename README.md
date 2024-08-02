@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# GitHub Profile and Repository Viewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React application that allows users to view GitHub profiles and repositories. Users can search for GitHub users, view their profiles, and explore their repositories with various filters and sorting options.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Installation](#installation)
+- [GitHub API](#GitHubAPI)
+- [Usage](#usage)
+- [Components](#components)
+- [Contributing](#components)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Profile View:** Displays user profile information, including avatar, name, bio, location, public repositories, followers, and links to email and LinkedIn.
+- **Repository List:** Lists repositories with features like filtering by language and type, sorting by stars or name, and pagination.
+- **Search Functionality:** Allows users to search for GitHub users and fetch their profile and repository data.
+- **Interactive UI:** Users can star/unstar repositories and view the update time of repositories.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. **Clone the repository:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/EyaRidene/your-repo.git
 
-### `npm run build`
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Navigate to the project directory:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   cd your-repo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```
 
-### `npm run eject`
+3. **Install dependencies:**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   npm install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. **Start the development server:**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+## GitHub API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application uses the official GitHub API to fetch repository data for the specified user.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
+
+- **Search for a GitHub user:** Enter a GitHub username in the search bar and click "Search".
+- **View Profile:** The user's profile information will be displayed, including their avatar, bio, location, and links.
+- **Explore Repositories:** The list of repositories will be shown with filtering and sorting options. Use the filters to narrow down the list and the pagination controls to navigate through pages.
+
+## Components
+
+- **Header:** Contains the search bar and navigation links.
+- **SearchBar:** Provides an input field for searching GitHub users.
+- **Profile:** Displays user profile information.
+- **RepositoryList:** Manages the display of repositories, including filters and sorting.
+- **RepositoryItem:** Shows details of a single repository with an option to star/unstar.
+
+## Contributing
+
+If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+
+2. Create a new branch:
+
+   ```bash
+    git checkout -b feature/your-feature
+   ```
+
+3. Make your changes and commit:
+
+   ```bash
+   git commit -am 'Add new feature'
+   ```
+
+4. Push to the branch:
+
+   ```bash
+   git push origin feature/your-feature
+   ```
+
+5. Create a new Pull Request.
