@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/RepositoryItem.css';
 
 interface RepositoryItemProps {
@@ -13,14 +13,23 @@ interface RepositoryItemProps {
 }
 
 const RepositoryItem: React.FC<RepositoryItemProps> = ({ name, language, html_url, description, stars, license, visibility, updated_at }) => {
+  const [isStarred, setIsStarred] = useState(false);
 
+  const handleStarClick = () => {
+    setIsStarred(!isStarred);
+  };
+  
   return (
     <div className="repository-item">
       <h3>
         <a href={html_url} target="_blank" rel="noopener noreferrer">{name}</a>
         <span className="visibility">{visibility}</span>
-        <button className="star-button">
-          <i className="fa-regular fa-star"></i> Star
+        <button
+          className={`star-button ${isStarred ? 'active' : ''}`}
+          onClick={handleStarClick}
+        >
+          <i className="fa-solid fa-star"></i>
+          {isStarred ? <span>Starred</span> : <span>Star</span>}
         </button>
 
       </h3>

@@ -70,6 +70,10 @@
 }
   
 .star-button i {
-    color: rgb(161, 161, 161);
+    color: rgb(123, 121, 121);
     margin-right: 3px;
+}
+
+.star-button.active i {
+    color: #f1c40f;
 }
