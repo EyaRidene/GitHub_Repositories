@@ -23,14 +23,14 @@ This project is a React application that allows users to view GitHub profiles an
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/EyaRidene/your-repo.git
+   git clone https://github.com/EyaRidene/GitHub_Repositories
 
    ```
 
 2. **Navigate to the project directory:**
 
    ```bash
-   cd your-repo
+   cd GitHub_Repositories
 
    ```
 
