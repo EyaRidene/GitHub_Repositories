@@ -56,3 +56,42 @@
     margin-bottom: 10px;
     font-weight: none;
 }
+
+.profile-location,
+  .profile-followers {
+    font-size: 12px;
+    color: #586069;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    align-self: start;
+    text-align: left;
+  }
+
+  .profile-mail,
+  .profile-linkedin {
+    font-size: 14px;
+    color: #141515;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    align-self: start;
+    text-align: left;
+  }
+
+  .profile-followers i {
+    margin-left: 5px;
+  }
+
+  .profile-followers span {
+    font-weight: bold;
+    color: black;
+    margin-right: 5px;
+  }
+  
+  .profile-followers i,
+  .profile-mail i,
+  .profile-location i,
+  .profile-linkedin i {
+    margin-right: 5px;
+  }
