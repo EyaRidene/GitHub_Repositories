@@ -19,6 +19,10 @@ const RepositoryItem: React.FC<RepositoryItemProps> = ({ name, language, html_ur
       <h3>
         <a href={html_url} target="_blank" rel="noopener noreferrer">{name}</a>
         <span className="visibility">{visibility}</span>
+        <button className="star-button">
+          <i className="fa-regular fa-star"></i> Star
+        </button>
+
       </h3>
       {description && <p className='description'>{description}</p>}
       <div className="info">
