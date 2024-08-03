@@ -53,6 +53,19 @@
     border: 1px solid gray;
 }
 
+.repository-item .language {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .repository-item .language-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+  }
+
 .star-button {
     position: absolute;
     top: 50%;

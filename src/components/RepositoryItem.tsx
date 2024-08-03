@@ -27,6 +27,13 @@ interface RepositoryItemProps {
   updated_at: string;
 }
 
+const languageColors: { [key: string]: string } = {
+  JavaScript: '#f1e05a',
+  Python: '#3572A5',
+  Java: '#b07219',
+  TypeScript: '#2b7489',
+};
+
 /**
  * A functional component that displays a single repository item.
  * Includes repository name, description, and additional details like language,
@@ -42,6 +49,8 @@ const RepositoryItem: React.FC<RepositoryItemProps> = ({ name, language, html_ur
   const handleStarClick = () => {
     setIsStarred(!isStarred);
   };
+
+  const languageColor = language ? languageColors[language] || '#ddd' : '#ddd';
   
   return (
     <div className="repository-item">
@@ -59,7 +68,10 @@ const RepositoryItem: React.FC<RepositoryItemProps> = ({ name, language, html_ur
       </h3>
       {description && <p className='description'>{description}</p>}
       <div className="info">
+        <div className="language">
+          <span className="language-dot" style={{ backgroundColor: languageColor }}></span>
           <p>{language || 'N/A'}</p>
+        </div>
         {stars >= 0 && <p>{stars} <i className="fa-solid fa-star"></i></p>}
         {license && <p><i className="fa-solid fa-scale-balanced"></i> {license}</p>}
       </div>
