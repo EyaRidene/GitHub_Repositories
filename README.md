@@ -3,17 +3,17 @@
 This project is a React application that allows users to view GitHub profiles and repositories. Users can search for GitHub users, view their profiles, and explore their repositories with various filters and sorting options.
 The project is well-documented to facilitate understanding and development.
 
-![Project Page Screenshot](https://github.com/EyaRidene/GitHub_Repositories/public/project.png)
+![Project Page Screenshot](https://github.com/EyaRidene/GitHub_Repositories/blob/master/public/GitHub-Logo.png)
 
 ## Table of Contents
 
 - [Features](#features)
 - [Installation](#installation)
-- [GitHub API](#GitHub#API)
+- [GitHub API](#GitHub API)
 - [Usage](#usage)
 - [Components](#components)
 - [Contributing](#components)
-- [Future Improvements](#Future#Improvements)
+- [Future Improvements](#Future Improvements)
 
 ## Features
 
