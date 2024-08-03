@@ -43,6 +43,29 @@ const languageColors: { [key: string]: string } = {
  * @returns {JSX.Element} The rendered repository item element.
  */
 
+const timeAgo = (dateString: string) => {
+  const now = new Date();
+  const updatedDate = new Date(dateString);
+  const diffInSeconds = Math.floor((now.getTime() - updatedDate.getTime()) / 1000);
+  const intervals: { [key: string]: number } = {
+    year: 31536000,
+    month: 2592000,
+    day: 86400,
+    hour: 3600,
+    minute: 60,
+    second: 1,
+  };
+
+  for (const [unit, seconds] of Object.entries(intervals)) {
+    const interval = Math.floor(diffInSeconds / seconds);
+    if (interval >= 1) {
+      return `Updated ${interval} ${unit}${interval > 1 ? 's' : ''} ago`;
+    }
+  }
+
+  return 'Just now';
+};
+
 const RepositoryItem: React.FC<RepositoryItemProps> = ({ name, language, html_url, description, stars, license, visibility, updated_at }) => {
   const [isStarred, setIsStarred] = useState(false);
 
@@ -74,6 +97,7 @@ const RepositoryItem: React.FC<RepositoryItemProps> = ({ name, language, html_ur
         </div>
         {stars >= 0 && <p>{stars} <i className="fa-solid fa-star"></i></p>}
         {license && <p><i className="fa-solid fa-scale-balanced"></i> {license}</p>}
+        <p>{timeAgo(updated_at)}</p>
       </div>
     </div>
   );
