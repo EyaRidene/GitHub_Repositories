@@ -7,6 +7,13 @@ import Profile from './components/Profile';
 import RepositoryList from './components/RepositoryList';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+/**
+ * The main App component that renders the application.
+ * Combines the Header, Profile, and RepositoryList components.
+ * 
+ * @returns {JSX.Element} The rendered application element.
+ */
+
 interface Repository {
   id: number;
   name: string;
