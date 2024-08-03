@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import axios from 'axios';
 import './App.css';
-import SearchBar from './components/SearchBar';
 import Profile from './components/Profile';
 import RepositoryList from './components/RepositoryList';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -30,6 +29,7 @@ const App: React.FC = () => {
   const [repositories, setRepositories] = useState<Repository[]>([]);
   const [profileData, setProfileData] = useState<any>(null);
   const [totalStars, setTotalStars] = useState<number>(0);
+  const [errorMessage, setErrorMessage] = useState<boolean>(false);
   
   const handleSearch = async (userName: string) => {
   // fetch the repositories of the user
@@ -39,15 +39,17 @@ const App: React.FC = () => {
       setTotalStars(reposResponse.data.reduce((sum: number, repo: any) => sum + repo.stargazers_count, 0));
       const profileResponse = await axios.get(`https://api.github.com/users/${userName}`);
       setProfileData(profileResponse.data);
+      setErrorMessage(false);
   } catch (error) {
     console.error('Error fetching repositories', error);
+    setErrorMessage(true);
   }
   };
 
   return (
     <div className="App">
-      <SearchBar onSearch={handleSearch}/>
-      <Header repositoryCount={repositories.length} stars={totalStars}/>
+      <Header repositoryCount={repositories.length} stars={totalStars} onSearch={handleSearch}/>
+      {errorMessage && <div className="error-message">User not found or error fetching data.</div>}
       {profileData && (
         <div className="container">
           <div className="profile-section">

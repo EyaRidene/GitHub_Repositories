@@ -25,3 +25,10 @@ body {
 .repository-list-section {
   flex: 3;
 }
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
