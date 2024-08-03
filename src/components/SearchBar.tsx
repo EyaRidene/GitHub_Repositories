@@ -1,4 +1,3 @@
-// src/components/SearchBar.tsx
 import '../styles/SearchBar.css';
 import React, { useState } from 'react';
 
@@ -13,6 +12,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     onSearch(userName);
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return (
     <div className="search-bar">
       <input
@@ -20,6 +25,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         placeholder="Enter GitHub username"
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
+        onKeyDown={handleKeyDown}
         className='search-input'
       />
       <button onClick={handleSearch} className='search-button'>Search</button>
