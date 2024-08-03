@@ -1,6 +1,21 @@
 import React from 'react';
 import '../styles/Profile.css'; 
 
+/**
+ * Props for the Profile component.
+ * 
+ * @interface ProfileProps
+ * @property {string} avatarUrl - The URL of the user's avatar image.
+ * @property {string} name - The user's name.
+ * @property {string} bio - The user's bio.
+ * @property {string} [location] - Optional location of the user.
+ * @property {number} publicRepos - The number of public repositories.
+ * @property {number} followers - The number of followers.
+ * @property {number} following - The number of users the user is following.
+ * @property {string} email - The user's email address.
+ * @property {string} linkedin - The user's LinkedIn profile URL.
+ */
+
 interface ProfileProps {
   avatarUrl: string;
   name: string;
@@ -12,6 +27,15 @@ interface ProfileProps {
   email:string;
   linkedin:string;
 }
+
+/**
+ * A functional component that displays user profile information.
+ * Renders the user's avatar, name, bio, and optional details like location,
+ * followers, following, email, and LinkedIn profile.
+ * 
+ * @param {ProfileProps} props - The properties passed to the component.
+ * @returns {JSX.Element} The rendered profile element.
+ */
 
 const Profile: React.FC<ProfileProps> = ({
   avatarUrl,

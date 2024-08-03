@@ -1,6 +1,21 @@
 import React, { useState } from 'react';
 import '../styles/RepositoryItem.css';
 
+
+/**
+ * Props for the RepositoryItem component.
+ * 
+ * @interface RepositoryItemProps
+ * @property {string} name - The name of the repository.
+ * @property {string | null} language - The programming language of the repository.
+ * @property {string} html_url - The URL of the repository.
+ * @property {string | null} description - The description of the repository.
+ * @property {number} stars - The number of stars the repository has.
+ * @property {string | null} license - The license type of the repository.
+ * @property {string} visibility - The visibility of the repository (e.g., public, private).
+ * @property {string} updated_at - The last updated timestamp of the repository.
+ */
+
 interface RepositoryItemProps {
   name: string;
   language: string | null;
@@ -11,6 +26,15 @@ interface RepositoryItemProps {
   visibility: string;
   updated_at: string;
 }
+
+/**
+ * A functional component that displays a single repository item.
+ * Includes repository name, description, and additional details like language,
+ * stars, license, and visibility. Provides a button to star/unstar the repository.
+ * 
+ * @param {RepositoryItemProps} props - The properties passed to the component.
+ * @returns {JSX.Element} The rendered repository item element.
+ */
 
 const RepositoryItem: React.FC<RepositoryItemProps> = ({ name, language, html_url, description, stars, license, visibility, updated_at }) => {
   const [isStarred, setIsStarred] = useState(false);

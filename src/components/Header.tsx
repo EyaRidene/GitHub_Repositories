@@ -1,10 +1,26 @@
 import React from 'react';
 import '../styles/Header.css';
 
+/**
+ * Props for the Header component.
+ * 
+ * @interface HeaderProps
+ * @property {number} repositoryCount - The number of repositories.
+ * @property {number} stars - The number of stars.
+ */
+
 interface HeaderProps {
   repositoryCount: number;
   stars: number;
 }
+
+/**
+ * A functional component that renders the header section of the application.
+ * Displays links to GitHub with counts for repositories and stars.
+ * 
+ * @param {HeaderProps} props - The properties passed to the component.
+ * @returns {JSX.Element} The rendered header element.
+ */
 
 const Header: React.FC <HeaderProps>= ({ repositoryCount, stars }) => {
   return (

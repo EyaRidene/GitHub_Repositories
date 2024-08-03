@@ -2,6 +2,22 @@ import React, { useState } from 'react';
 import RepositoryItem from './RepositoryItem';
 import '../styles/RepositoryList.css';
 
+
+/**
+ * Props for the RepositoryList component.
+ * 
+ * @interface Repository
+ * @property {number} id - The unique identifier of the repository.
+ * @property {string} name - The name of the repository.
+ * @property {string | null} language - The programming language of the repository.
+ * @property {string} html_url - The URL of the repository.
+ * @property {string | null} description - The description of the repository.
+ * @property {number} stars - The number of stars the repository has.
+ * @property {string | null} license - The license type of the repository.
+ * @property {string} visibility - The visibility of the repository (e.g., public, private).
+ * @property {string} updated_at - The last updated timestamp of the repository.
+ */
+
 interface Repository {
   id: number;
   name: string;
@@ -14,9 +30,24 @@ interface Repository {
   updated_at: string;
 }
 
+/**
+ * Props for the RepositoryList component.
+ * 
+ * @interface RepositoryListProps
+ * @property {Repository[]} repositories - The list of repositories to display.
+ */
+
 interface RepositoryListProps {
   repositories: Repository[];
 }
+
+/**
+ * A functional component that displays a list of repositories.
+ * Includes filtering, sorting, and pagination features.
+ * 
+ * @param {RepositoryListProps} props - The properties passed to the component.
+ * @returns {JSX.Element} The rendered list of repositories.
+ */
 
 const RepositoryList: React.FC<RepositoryListProps> = ({ repositories }) => {
 
