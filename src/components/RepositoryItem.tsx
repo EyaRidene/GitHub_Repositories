@@ -35,39 +35,50 @@ const languageColors: { [key: string]: string } = {
 };
 
 /**
- * A functional component that displays a single repository item.
- * Includes repository name, description, and additional details like language,
- * stars, license, and visibility. Provides a button to star/unstar the repository.
+ * A functional component that displays detailed information about a repository.
+ * This includes the repository name, description, language, stars, license, visibility,
+ * and the last update timestamp. It also provides a button to star/unstar the repository.
  * 
  * @param {RepositoryItemProps} props - The properties passed to the component.
  * @returns {JSX.Element} The rendered repository item element.
  */
 
-const timeAgo = (dateString: string) => {
-  const now = new Date();
-  const updatedDate = new Date(dateString);
-  const diffInSeconds = Math.floor((now.getTime() - updatedDate.getTime()) / 1000);
-  const intervals: { [key: string]: number } = {
-    year: 31536000,
-    month: 2592000,
-    day: 86400,
-    hour: 3600,
-    minute: 60,
-    second: 1,
-  };
-
-  for (const [unit, seconds] of Object.entries(intervals)) {
-    const interval = Math.floor(diffInSeconds / seconds);
-    if (interval >= 1) {
-      return `Updated ${interval} ${unit}${interval > 1 ? 's' : ''} ago`;
-    }
-  }
-
-  return 'Just now';
-};
-
 const RepositoryItem: React.FC<RepositoryItemProps> = ({ name, language, html_url, description, stars, license, visibility, updated_at }) => {
   const [isStarred, setIsStarred] = useState(false);
+
+    /**
+   * Converts a date string to a human-readable relative time format.
+   * 
+   * @param {string} dateString - The date string to be converted.
+   * @returns {string} The relative time format.
+   */
+
+  const timeAgo = (dateString: string) => {
+    const now = new Date();
+    const updatedDate = new Date(dateString);
+    const diffInSeconds = Math.floor((now.getTime() - updatedDate.getTime()) / 1000);
+    const intervals: { [key: string]: number } = {
+      year: 31536000,
+      month: 2592000,
+      day: 86400,
+      hour: 3600,
+      minute: 60,
+      second: 1,
+    };
+  
+    for (const [unit, seconds] of Object.entries(intervals)) {
+      const interval = Math.floor(diffInSeconds / seconds);
+      if (interval >= 1) {
+        return `Updated ${interval} ${unit}${interval > 1 ? 's' : ''} ago`;
+      }
+    }
+  
+    return 'Just now';
+  };
+
+    /**
+   * Toggles the starred state of the repository when the star button is clicked.
+   */
 
   const handleStarClick = () => {
     setIsStarred(!isStarred);

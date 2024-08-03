@@ -8,6 +8,7 @@ import SearchBar from './SearchBar';
  * @interface HeaderProps
  * @property {number} repositoryCount - The number of repositories.
  * @property {number} stars - The number of stars.
+ * @property {(userName: string) => void} onSearch - Callback function to handle search input.
  */
 
 interface HeaderProps {
