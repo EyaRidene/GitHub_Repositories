@@ -22,12 +22,12 @@
     margin-bottom: 5px;
     border: 1px solid #a9a9a9;
     font-weight: 600;
-    color: #727272;
+    color: #464646;
     cursor: pointer;
 }
 
 .follow-button:hover{
-    background-color: #c9c9c9;
+    background-color: rgb(248, 245, 245);
 }
 
 .profile-name {
