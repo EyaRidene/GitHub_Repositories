@@ -9,11 +9,11 @@ The project is well-documented to facilitate understanding and development.
 
 - [Features](#features)
 - [Installation](#installation)
-- [GitHub API](#GitHub API)
+- [GitHub API](#github-api)
 - [Usage](#usage)
 - [Components](#components)
-- [Contributing](#components)
-- [Future Improvements](#Future Improvements)
+- [Contributing](#contributing)
+- [Future Improvements](#future-improvements)
 
 ## Features
 
@@ -98,5 +98,7 @@ If you would like to contribute to this project, please follow these steps:
 ## Future Improvements:
 
 - **Autocomplete and Suggestions:** Implement an autocomplete feature to suggest GitHub usernames as users type in the search bar. This can improve user experience by providing instant feedback and reducing search errors.
-- **DSearch History:** Store and display recent searches to allow users to quickly access previous searches or suggest related usernames.
+- **Search History:** Store and display recent searches to allow users to quickly access previous searches or suggest related usernames.
 - **Responsive Design:** Ensure the application is fully responsive across all devices and screen sizes. This includes improving mobile views and accessibility
+
+Thank you for checking out the GitHub Profile and Repository Viewer project. Feel free to explore, contribute, and provide feedback. Your support and contributions are greatly appreciated! 😊
