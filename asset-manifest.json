@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/GitHub_Repositories/static/css/main.f56523b4.css",
-    "main.js": "/GitHub_Repositories/static/js/main.8bd5ab48.js",
+    "main.css": "/GitHub_Repositories/static/css/main.479103ba.css",
+    "main.js": "/GitHub_Repositories/static/js/main.2c7c1d06.js",
     "static/js/453.c2e4e824.chunk.js": "/GitHub_Repositories/static/js/453.c2e4e824.chunk.js",
     "static/media/fa-solid-900.ttf": "/GitHub_Repositories/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/fa-brands-400.ttf": "/GitHub_Repositories/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
@@ -12,12 +12,12 @@
     "static/media/fa-v4compatibility.ttf": "/GitHub_Repositories/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/GitHub_Repositories/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/GitHub_Repositories/index.html",
-    "main.f56523b4.css.map": "/GitHub_Repositories/static/css/main.f56523b4.css.map",
-    "main.8bd5ab48.js.map": "/GitHub_Repositories/static/js/main.8bd5ab48.js.map",
+    "main.479103ba.css.map": "/GitHub_Repositories/static/css/main.479103ba.css.map",
+    "main.2c7c1d06.js.map": "/GitHub_Repositories/static/js/main.2c7c1d06.js.map",
     "453.c2e4e824.chunk.js.map": "/GitHub_Repositories/static/js/453.c2e4e824.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f56523b4.css",
-    "static/js/main.8bd5ab48.js"
+    "static/css/main.479103ba.css",
+    "static/js/main.2c7c1d06.js"
   ]
 }
