@@ -49,6 +49,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Header repositoryCount={repositories.length} stars={totalStars} onSearch={handleSearch}/>
+      {!errorMessage && !profileData && <div className="info-message">Search for a GitHub username</div>}
       {errorMessage && <div className="error-message">User not found or error fetching data.</div>}
       {profileData && (
         <div className="container">

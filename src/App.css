@@ -26,6 +26,13 @@ body {
   flex: 3;
 }
 
+.info-message {
+  color: blue;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
 .error-message {
   color: red;
   margin-top: 10px;
